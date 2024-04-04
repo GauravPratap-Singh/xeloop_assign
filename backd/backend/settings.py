@@ -52,7 +52,16 @@ INSTALLED_APPS = [
     'rest_framework',
     'todo',
     'user_api.apps.UserApiConfig',
+    'drf_yasg',
 ]
+
+SWAGGER_SETTINGS = {
+    'SECURITY_DEFINITIONS': {
+        'Basic': {
+            'type': 'basic'
+        }
+    }
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
